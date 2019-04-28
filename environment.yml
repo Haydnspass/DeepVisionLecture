@@ -1,0 +1,11 @@
+name: deepvisionlecture
+channels:
+  - pytorch
+  - conda-forge
+  
+dependencies:
+  - python=3.6
+  - numpy
+  - scikit-learn
+  - scikit-image
+  - pytorch
