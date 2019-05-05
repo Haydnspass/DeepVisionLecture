@@ -7,14 +7,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 from scipy import ndimage
-from tqdm import tqdm
+import tqdm
 
 from sklearn.metrics import accuracy_score
 from scipy.optimize import leastsq
 from sklearn.svm import SVC, LinearSVC
 
 # function to load images and labels of the original CIFAR10 dataset
-from cifar10 import load_CIFAR10
+from material.cifar10 import load_CIFAR10
 
 
 cifar10_dir = './cifar-10-batches-py'# download the files from the official website
@@ -72,7 +72,7 @@ def get_multiple_classes(X_train_feat, Y_train, X_test_feat, Y_test):
 
 ######### Solutions ############
 #Load Data globally
-X_train_feat, Y_train, X_test_feat, Y_test = get_data()
+# X_train_feat, Y_train, X_test_feat, Y_test = get_data()
 
 # Implement a linear classifier solved using least-square.
 # Suggestion: use the function "leastsq"
@@ -86,7 +86,7 @@ class LSQclassifier:
     
     def predict(self,x):
         #TODO
-        pred = 
+        pred = None
         return pred
 
 # Solve binary task using a linear classifier trained by least-square
@@ -99,7 +99,7 @@ def task1():
     train_acc = accuracy_score(y,pred_train)
     test_acc  = accuracy_score(y_test,pred_test)
     print('Linear classifier by Least-Square: Train %.2f, Test %.2f'%(train_acc,test_acc))
-    # Plot learned weights using plt.bars
+    # learned weights using plt.bars
     # TODO
 
 
